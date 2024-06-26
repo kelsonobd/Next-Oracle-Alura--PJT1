@@ -6,7 +6,7 @@ let tentativas = 1;
 while (chute != numeroSecreto) {
     chute = prompt('Escolha o número entre 1 e 10');
     if (chute == numeroSecreto) {
-        alert(`Acertou o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+        break;
     } else {
         if (chute > numeroSecreto) {
             alert(`o numero secreto é menor que ${chute}`);
@@ -15,4 +15,10 @@ while (chute != numeroSecreto) {
         }
         tentativas++;
     }
+}
+
+if (tentativas >1 ){
+alert(`Acertou o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+}else {
+    alert(`Acertou o número secreto ${numeroSecreto} com ${tentativas} tentativa`);
 }
