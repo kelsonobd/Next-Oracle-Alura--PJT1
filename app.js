@@ -1,10 +1,11 @@
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = 5;
+let numeroMaximo = 200;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo +1 );
 let chute;
 let tentativas = 1;
 
 while (chute != numeroSecreto) {
-    chute = prompt('Escolha o número entre 1 e 10');
+    chute = prompt(`Escolha o número entre 1 e ${numeroMaximo}`);
     if (chute == numeroSecreto) {
         break;
     } else {
